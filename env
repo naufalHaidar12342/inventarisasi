@@ -20,7 +20,7 @@
 # APP
 #--------------------------------------------------------------------
 
-# app.baseURL = 'inventarisasi'
+# app.baseURL = ''
 # app.forceGlobalSecureRequests = false
 
 # app.sessionDriver = 'CodeIgniter\Session\Handlers\FileHandler'
