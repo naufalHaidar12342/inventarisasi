@@ -1,6 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistem Inventarisasi</title>
+
+    <!-- css dari bootstrap. butuh koneksi internet -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+    <!-- icon dari bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+
+</head>
+
 <?= $this->extend('layout/template'); ?>
 
 <?= $this->section('content'); ?>
+
 
 <!-- isi halaman RuanganInventarisasi  -->
 <h2 class="h2 text-uppercase fs-3 text-center mb-5 mt-5">Pilih Ruangan</h2>
@@ -29,7 +47,7 @@
             <div class="card-body">
                 <h5 class="card-title">Produksi</h5>
                 <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                <a href="#" class="btn btn-primary">
+                <a href="/Inventarisasi/produksi" class="btn btn-primary">
                     Masuk
                     <i class="bi bi-box-arrow-in-right"></i>
                 </a>
@@ -44,7 +62,7 @@
             <div class="card-body">
                 <h5 class="card-title">Akuntansi</h5>
                 <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                <a href="#" class="btn btn-primary">
+                <a href="/Inventarisasi/akuntansi" class="btn btn-primary">
                     Masuk
                     <i class="bi bi-box-arrow-in-right"></i>
                 </a>
@@ -55,7 +73,7 @@
 
 <!-- tombol kembali ke page sebelumnya -->
 <div class="row justify-content-center g-3">
-    <a class="btn btn-info col-1 mt-5" href="/">
+    <a class="btn btn-primary col-1 mt-5" href="/">
         <i class="bi bi-box-arrow-left "></i>
         Kembali
     </a>
