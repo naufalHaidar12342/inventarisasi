@@ -3,7 +3,7 @@
 <?= $this->section('content'); ?>
 
 
-<h2 class="h2 text-uppercase fs-3 text-center mb-5 mt-5">Sistem Informasi Manajemen Aset</h2>
+<h2 class="h2 text-uppercase fs-3 text-center mb-5 mt-5 pt-4">Sistem Informasi Manajemen Aset</h2>
 <!-- card untuk pilih ruangan -->
 <div class="row justify-content-center g-3">
     <div class="col-12 col-lg-4">
@@ -26,7 +26,7 @@
     </div>
     <div class="col-12 col-lg-4">
         <div class="card m-auto" style="width: 24rem;">
-            <img src="/img/pexels-pixabay-256559.jpg" class="card-img-top" alt="...">
+            <img src="/img/robinson-greig-HrnAxAUwle8-unspl.jpg" class="card-img-top" alt="...">
             <div class="card-body">
                 <p class="card-text">
                     Courtesy: Pexels

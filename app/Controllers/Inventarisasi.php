@@ -2,11 +2,10 @@
 
 namespace App\Controllers;
 
-use CodeIgniter\Controller;
 
 class Inventarisasi extends BaseController
 {
-
+    protected $request;
 
     public function index()
     {
@@ -51,7 +50,11 @@ class Inventarisasi extends BaseController
         echo view('pages/InputCS', $data);
     }
 
-
+    //m
+    public function saveCS()
+    {
+        $this->request->getVar('');
+    }
 
     //menampilkan halaman akuntansi
     public function akuntansi()
