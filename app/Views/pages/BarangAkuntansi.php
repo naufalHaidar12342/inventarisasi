@@ -1,10 +1,13 @@
 <?= $this->extend('layout/template'); ?>
 
-
 <?= $this->section('content'); ?>
 
 <h2 class="fs-3 text-center mb-5 mt-5"> Input Barang Berlebih</h2>
 
+<a class="btn btn-primary col-1 mt-2 ms-4 mb-3" href="/Inventarisasi/pindah">
+    <i class="bi bi-box-arrow-left "></i>
+    Kembali
+</a>
 <form action="">
     <div class="row justify-content-between pe-5 ps-4">
         <!-- kolom kiri -->
@@ -21,12 +24,18 @@
     </div>
 </form>
 
-<!-- tombol untuk menambah data -->
+<!-- baris untuk tombol -->
 <div class="row">
     <div class="container">
+        <!-- tombol untuk menambah data -->
         <a class="btn btn-success col-1 mt-5 ms-4" href="#">
             <i class="bi bi-pencil-square"></i>
             Tambah Data
+        </a>
+        <!-- tombol untuk edit data -->
+        <a class="btn btn-warning col-1 mt-5 ms-4" href="#">
+            <i class="bi bi-pencil-square"></i>
+            Edit
         </a>
     </div>
 
@@ -66,18 +75,6 @@
     </table>
 
 </div>
-
-<!-- tombol untuk edit data -->
-<div class="row">
-    <div class="container">
-        <a class="btn btn-warning col-1 mt-5 ms-4" href="#">
-            <i class="bi bi-pencil-square"></i>
-            Edit
-        </a>
-    </div>
-
-</div>
-
 
 
 
