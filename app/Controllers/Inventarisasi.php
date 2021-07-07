@@ -57,7 +57,7 @@ class Inventarisasi extends BaseController
         echo view('pages/InputCS', $data);
     }
 
-    //m
+    //menangkap data yang dikirim
     public function saveCS()
     {
         $this->request->getVar('');

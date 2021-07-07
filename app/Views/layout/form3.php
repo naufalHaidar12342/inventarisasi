@@ -14,6 +14,12 @@
                 <label for="kondisi" class=" col-form-label w-25">Kondisi</label>
                 <input type="text" class="form-control ms-2" id="kondisi" name="kondisi">
             </div>
+
+            <div class="col-12 d-flex flex-row mb-4">
+                <label for="pemakai" class=" col-form-label w-25">Pemakai</label>
+                <input type="text" class="form-control ms-2" id="pemakai" name="pemakai">
+            </div>
+
         </div>
 
         <div class="col-5">

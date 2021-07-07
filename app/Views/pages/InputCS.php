@@ -5,7 +5,7 @@
 
 <!-- tombol kembali ke halaman cs -->
 <div class="container d-flex flex-column align-items-start">
-    <a href="" class="btn btn-primary my-4">
+    <a href="/Inventarisasi/customerService" class="btn btn-primary my-4">
         <i class="bi bi-box-arrow-left "></i>
         Kembali
     </a>
