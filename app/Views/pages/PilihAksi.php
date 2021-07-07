@@ -35,7 +35,7 @@
                 <h5 class="card-title">Pindah Ruangan</h5>
                 <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
 
-                <a href="#" class="btn btn-primary">
+                <a href="/Inventarisasi/ruanganBMU" class="btn btn-primary">
                     Masuk
                     <i class="bi bi-box-arrow-in-right"></i>
                 </a>

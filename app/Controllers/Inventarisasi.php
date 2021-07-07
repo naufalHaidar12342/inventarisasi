@@ -26,7 +26,14 @@ class Inventarisasi extends BaseController
 
         return view('pages/RuanganInventarisasi', $data);
     }
+    public function ruanganBMU()
+    {
+        $data = [
+            'title' => "Pindah Ruangan BMU"
+        ];
 
+        return view('pages/PindahRuanganBMU', $data);
+    }
     /*bagian customer service*/
     //menampilkan halaman CS
     public function customerService()

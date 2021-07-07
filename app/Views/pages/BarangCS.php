@@ -5,31 +5,40 @@
 
 <h2 class="fs-3 text-center mb-5 mt-5"> Input Barang Berlebih</h2>
 <!-- tombol kembali ke halaman sebelumnya -->
-<a class="btn btn-primary col-1 mt-5 ms-4 mb-4" href="/Inventarisasi/pindah">
+<a class="btn btn-primary col-1 mt-5 ms-5 mb-4" href="/Inventarisasi/pindah">
     <i class="bi bi-box-arrow-left "></i>
     Kembali
 </a>
+
+<!-- bagian menampilkan ruangan dan pengurus -->
 <form action="">
     <?= csrf_field(); ?>
-    <div class="row justify-content-between pe-5 ps-4">
 
-        <!-- kolom kiri -->
-        <div class="col-5 d-flex flex-row">
-            <label for="Ruangan" class="col-form-label me-4">Ruangan</label>
-            <input type="text" class="form-control" value="">
-        </div>
-        <!-- kolom kanan -->
-        <div class="col-5 d-flex flex-row flex">
-            <label for="PengurusBarang" class="col-form-label me-4">Pengurus Barang</label>
-            <input type=" text" class="form-control">
+    <div class="container d-flex flex-row">
+        <div class="row justify-content-between ms-3 me-4 my-4 w-100">
+            <div class="col-5">
+                <!-- kolom kiri -->
+                <div class="col-12 d-flex flex-row">
+                    <label for="Ruangan" class="col-form-label w-25">Ruangan</label>
+                    <input type="text" class="form-control">
+                </div>
+
+            </div>
+
+            <div class="col-6">
+                <!-- kolom kanan -->
+                <div class="col-12 d-flex flex-row">
+                    <label for="PengurusBarang" class="col-form-label w-25">Pengurus Barang</label>
+                    <input type="text" class="form-control ms-">
+                </div>
+            </div>
 
         </div>
     </div>
 </form>
 
 
-
-<div class="row">
+<div class="row ms-3">
     <div class="container">
         <!-- tombol untuk menambah data -->
         <a class="btn btn-success col-1 mt-5 ms-4" href="/Inventarisasi/inputCS">

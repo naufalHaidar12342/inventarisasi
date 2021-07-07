@@ -3,19 +3,20 @@
 <?= $this->section('content'); ?>
 <h2 class="fs-3 text-center mb-5 mt-5"> Tambah Data</h2>
 
+<!-- tombol kembali ke halaman cs -->
+<div class="container d-flex flex-column align-items-start">
+    <a href="" class="btn btn-primary my-4">
+        <i class="bi bi-box-arrow-left "></i>
+        Kembali
+    </a>
+</div>
+
 <form action="/Inventarisasi/saveCS" method="post">
     <?= csrf_field(); ?>
-    <?= $this->include('layout/form'); ?>
 
-    <button type="submit" class="btn btn-primary ms-5 my-4" name="submit">
-        <i class="fa fa-paper-plane" aria-hidden="true"></i>
-        Submit
-    </button>
+    <?= $this->include('layout/form3'); ?>
 
-    <button type="reset" class="btn btn-warning ms-3 my-4">
-        <i class="bi bi-arrow-counterclockwise"></i>
-        Reset
-    </button>
+
 </form>
 
 
