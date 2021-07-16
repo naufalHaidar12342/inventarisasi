@@ -8,7 +8,7 @@
 
 <!-- tombol kembali ke halaman pilih aksi -->
 <div class="container d-flex flex-column align-items-start">
-    <a href="/Inventarisasi/index" class="btn btn-primary my-4">
+    <a href="/Inventarisasi/index" class="btn btn-primary shadow my-4">
         <i class="bi bi-box-arrow-left "></i>
         Kembali
     </a>
@@ -54,11 +54,11 @@
 <div class="container d-flex flex-column">
     <div class="row d-flex my-4">
         <div class="col-12">
-            <a href="" class="btn btn-success">
+            <a href="" class="btn btn-success shadow">
                 <i class="bi bi-box-arrow-left "></i>
                 Tambah Data
             </a>
-            <a href="" class="btn btn-warning">
+            <a href="" class="btn btn-warning shadow">
                 Edit
             </a>
         </div>
@@ -88,7 +88,7 @@
                     <!-- isi dari tiap kolom. mengisinya dari kiri ke kanan -->
                     <td>1</td>
                     <td>129191919</td>
-                    <td>LAP23-Laptop 24 inch</td>
+                    <td>LAP23-Laptop 24 inch(dummy data)</td>
                     <td>898989</td>
                     <td>Laptop</td>
                     <td>29/01/2021</td>

@@ -14,7 +14,7 @@ class Login extends BaseController
             'title' => "Sistem Informasi Manajemen Aset"
         ];
 
-        return view('logins/Login', $data);
+        return view('auth/Login', $data);
     }
 
     public function submit()
@@ -45,14 +45,5 @@ class Login extends BaseController
         // daftar user ke database
         $pageTitle = ['title' => 'Daftar Akun'];
         return view('/auth/register', $pageTitle);
-    }
-
-    public function signUp()
-    {
-        $data = [
-            'title' => "Daftarkan Akun"
-        ];
-
-        return view('logins/Register', $data);
     }
 }

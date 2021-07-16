@@ -7,7 +7,7 @@
 <!-- card untuk pilih ruangan -->
 <div class="row justify-content-center g-3">
     <div class="col-12 col-lg-4">
-        <div class="card m-auto" style="width: 24rem;">
+        <div class="card m-auto shadow" style="width: 24rem;">
             <img src="/img/pexels-pixabay-256559.jpg" class="card-img-top" alt="...">
             <div class="card-body">
                 <p class="card-text">
@@ -15,8 +15,9 @@
                     <a href="https://www.pexels.com/photo/stack-of-books-in-shelf-256559/"></a>
                 </p>
                 <h5 class="card-title">Daftar Inventaris Ruangan</h5>
-                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-
+                <p class="card-text fst-italic">
+                    Berisi ruangan Customer Service, Produksi, dan Akuntansi
+                </p>
                 <a href="/Inventarisasi/pindah" class="btn btn-primary">
                     Masuk
                     <i class="bi bi-box-arrow-in-right"></i>
@@ -25,11 +26,18 @@
         </div>
     </div>
     <div class="col-12 col-lg-4">
-        <div class="card m-auto" style="width: 24rem;">
+        <div class="card m-auto shadow" style="width: 24rem;">
             <img src="/img/robinson-greig-HrnAxAUwle8-unspl.jpg" class="card-img-top" alt="...">
             <div class="card-body">
                 <p class="card-text">
-                    Courtesy: Pexels
+                    Courtesy: <a href="https://unsplash.com/@robinson?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">
+                        Robinson Greig
+                    </a>
+                    on
+                    <a href="https://unsplash.com/photos/HrnAxAUwle8">
+                        Unsplash
+                    </a>
+
                     <a href="https://www.pexels.com/photo/stack-of-books-in-shelf-256559/"></a>
                 </p>
                 <h5 class="card-title">Pindah Ruangan</h5>

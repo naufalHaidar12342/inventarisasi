@@ -6,7 +6,7 @@
 
 <!-- tombol kembali ke halaman sebelumnya -->
 <div class="container d-flex flex-column align-items-start">
-    <a href="/Inventarisasi/pindah" class="btn btn-primary my-4">
+    <a href="<?= base_url(); ?>/Inventarisasi/pindah" class="btn btn-primary shadow my-4">
         <i class="bi bi-box-arrow-left "></i>
         Kembali
     </a>
@@ -21,7 +21,7 @@
         <div class="col-5">
             <div class="col-12 d-flex flex-row mb-4">
                 <label for="Ruangan" class="col-form-label me-4">Ruangan</label>
-                <input type="text" class="form-control">
+                <input type="text" class="form-control shadow">
             </div>
 
         </div>
@@ -29,7 +29,7 @@
         <div class="col-5">
             <div class="col-12 d-flex flex-row mb-4">
                 <label for="PengurusBarang" class="col-form-label me-4">Pengurus Barang</label>
-                <input type=" text" class="form-control">
+                <input type=" text" class="form-control shadow">
             </div>
         </div>
     </div>
@@ -42,12 +42,13 @@
 <div class="container d-flex flex-column">
     <div class="row d-flex my-4">
         <div class="col-12">
-            <a href="" class="btn btn-success">
-                <i class="bi bi-box-arrow-left "></i>
+            <a href="/Inventarisasi/inputProduksi" class="btn btn-success shadow">
+                <i class="bi bi-file-earmark-plus"></i>
                 Tambah Data
             </a>
-            <a href="" class="btn btn-warning">
-                Edit
+            <a href="" class="btn btn-warning shadow">
+                <i class="bi bi-pencil-square"></i>
+                Edit Data
             </a>
         </div>
     </div>
@@ -57,7 +58,7 @@
 <div class="container d-flex flex-column">
     <div class="table-responsive mt-5 ms-1 me-5">
         <table class="table table-bordered">
-            <thead>
+            <thead class="text-center align-middle">
                 <th>No</th>
                 <th>Nomer Register</th>
                 <th>Kode dan Nama Barang</th>
@@ -66,23 +67,39 @@
                 <th>Tanggal Perolehan</th>
                 <th>Keterangan</th>
                 <th>Kondisi</th>
+                <th>Keterangan Kondisi</th>
 
             </thead>
 
             <tbody>
                 <!--baris tabel  -->
-                <tr>
-                    <!-- isi dari tiap kolom. mengisinya dari kiri ke kanan -->
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
+                <?php
+                $callModel = model('App\Models\InventarisModel');
+                $index = 1;
+                $shows = $callModel->table('inventaris')
+                    ->join('kondisi', 'kondisi.id=inventaris.kondisi_id')
+                    ->join('ruangan', 'ruangan.id=inventaris.ruangan_id')
+                    ->orderBy('tanggal_perolehan', 'DESC')
+                    ->getWhere([
+                        'ruangan_id' => '2'
+                    ])
+                    ->getResultArray();
+                ?>
+                <?php foreach ($shows as $data) :    ?>
+                    <tr>
+                        <!-- isi dari tiap kolom. mengisinya dari kiri ke kanan -->
+                        <td class="text-center align-middle"><?= $index++; ?></td>
+                        <td></td>
+                        <td><?= $data['nama_barang']; ?></td>
+                        <td></td>
+                        <td></td>
+                        <td><?= $data['tanggal_perolehan']; ?></td>
+                        <td><?= $data['nama_ruangan']; ?></td>
+                        <td><?= $data['keterangan_kondisi']; ?></td>
+                        <td><?= $data['keterangan']; ?></td>
 
-                </tr>
+                    </tr>
+                <?php endforeach; ?>
             </tbody>
         </table>
 

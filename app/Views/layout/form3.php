@@ -13,7 +13,7 @@
             <div class="col-12 d-flex flex-row mb-4">
                 <label for="kondisi" class=" col-form-label w-25">Kondisi</label>
                 <select name="kondisi" id="kondisi" class="form-select ms-2">
-                    <option value="0">Pilih kondisi...</option>
+                    <option value="0">Pilih kondisi</option>
                     <?php
                     $kondisi = model('App\Models\KondisiModel');
                     $shows = $kondisi->findAll(); ?>
@@ -37,8 +37,22 @@
                 <input type="text" class="form-control ms-2" id="nup-simak" name="nup-simak" disabled>
             </div>
             <div class="col-12 d-flex flex-row mb-4">
-                <label for="keterangan" class="col-form-label w-25">Keterangan</label>
-                <input type="text" class="form-control ms-2" id="keterangan" name="keterangan">
+                <label for="keterangan-kondisi" class="w-25 col-form-label">Keterangan Kondisi</label>
+                <!-- <input type="text" class="form-control ms-2" id="keterangan-kondisi" name="keterangan-kondisi"> -->
+                <textarea class="form-control" name="keterangan-kondisi" id="" cols="30" rows="2"></textarea>
+            </div>
+            <div class="col-12 d-flex flex-row mb-4">
+                <label for="keterangan-ruangan" class="col-form-label w-25 ms-2">Keterangan Ruangan</label>
+                <select name="keterangan-ruangan" id="" class="form-select shadow">
+                    <option value="">Pilih ruangan</option>
+                    <?php
+                    $kondisi = model('App\Models\RuanganModel');
+                    $shows = $kondisi->findAll(); ?>
+                    <?php foreach ($shows as $data) : ?>
+                        <option value="<?= $data['id'] ?>"><?= $data['nama_ruangan'] ?></option>
+                    <?php endforeach; ?>
+
+                </select>
             </div>
             <div class="col-12 d-flex flex-row mb-4">
                 <label for="tgl-perolehan" class="col-form-label w-25">Tanggal Perolehan</label>
