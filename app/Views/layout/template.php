@@ -21,7 +21,9 @@
     <!-- navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid justify-content-end">
-            <a class="navbar-brand" href="#">Inventarisasi</a>
+            <a class="navbar-brand" href="#">
+                | Inventarisasi
+            </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -33,13 +35,13 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#">Tentang</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Logout</a>
-                    </li>
+
                 </ul>
                 <!-- <span class="navbar-text">
                     Navbar text with an inline element
                 </span> -->
+                <!-- <a class="nav-link" href="/login">Login</a> -->
+
             </div>
         </div>
     </nav>

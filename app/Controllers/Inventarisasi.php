@@ -3,9 +3,12 @@
 namespace App\Controllers;
 
 
+
 class Inventarisasi extends BaseController
 {
     protected $request;
+
+
 
     public function index()
     {
@@ -54,13 +57,28 @@ class Inventarisasi extends BaseController
         ];
 
 
-        echo view('pages/InputCS', $data);
+        echo view('pages/input/InputCS', $data);
     }
 
     //menangkap data yang dikirim
     public function saveCS()
     {
-        $this->request->getVar('');
+        $tanggal = $this->request->getVar('tgl-perolehan');
+        $formattedDate = date("Y-m-d H:i:s", strtotime($tanggal));
+
+
+
+        $data = [
+            'nama_barang' => $this->request->getVar('nama-barang'),
+            'kondisi_id' => $this->request->getVar('kondisi'),
+            'tanggal_perolehan' => $formattedDate,
+            'keterangan' => $this->request->getVar('keterangan'),
+        ];
+
+        $Inventaris = model('App\Models\InventarisModel');
+        $Inventaris->save($data);
+        session()->setFlashData('pesan', 'Data berhasil ditambahkan!');
+        return redirect()->to('/Inventarisasi/customerService');
     }
 
     //menampilkan halaman akuntansi

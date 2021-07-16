@@ -4,20 +4,29 @@
         <div class="col-5">
             <div class="col-12 d-flex flex-row mb-4">
                 <label for="kode-barang" class=" w-25 col-form-label">Kode Barang</label>
-                <input type="text" class="form-control ms-2" id="kode-barang" name="kode-barang">
+                <input type="text" class="form-control ms-2" id="kode-barang" name="kode-barang" disabled>
             </div>
             <div class="col-12 d-flex flex-row mb-4">
                 <label for="nama-barang" class="w-25 col-form-label">Nama Barang</label>
-                <input type="email" class="form-control ms-2" id="nama-barang" name="nama-barang">
+                <input type="text" class="form-control ms-2" id="nama-barang" name="nama-barang">
             </div>
             <div class="col-12 d-flex flex-row mb-4">
                 <label for="kondisi" class=" col-form-label w-25">Kondisi</label>
-                <input type="text" class="form-control ms-2" id="kondisi" name="kondisi">
+                <select name="kondisi" id="kondisi" class="form-select ms-2">
+                    <option value="0">Pilih kondisi...</option>
+                    <?php
+                    $kondisi = model('App\Models\KondisiModel');
+                    $shows = $kondisi->findAll(); ?>
+
+                    <?php foreach ($shows as $data) : ?>
+                        <option value="<?= $data['id']; ?>"><?= $data['keterangan_kondisi']; ?></option>
+                    <?php endforeach; ?>
+                </select>
             </div>
 
             <div class="col-12 d-flex flex-row mb-4">
                 <label for="pemakai" class=" col-form-label w-25">Pemakai</label>
-                <input type="text" class="form-control ms-2" id="pemakai" name="pemakai">
+                <input type="text" class="form-control ms-2" id="pemakai" name="pemakai" disabled>
             </div>
 
         </div>
@@ -25,15 +34,15 @@
         <div class="col-5">
             <div class="col-12 d-flex flex-row mb-4">
                 <label for="nup-simak" class="w-25 col-form-label">NUP SIMAK</label>
-                <input type="email" class="form-control ms-2" id="nup-simak" name="nup-simak">
+                <input type="text" class="form-control ms-2" id="nup-simak" name="nup-simak" disabled>
             </div>
             <div class="col-12 d-flex flex-row mb-4">
                 <label for="keterangan" class="col-form-label w-25">Keterangan</label>
-                <input type="email" class="form-control ms-2" id="keterangan" name="keterangan">
+                <input type="text" class="form-control ms-2" id="keterangan" name="keterangan">
             </div>
             <div class="col-12 d-flex flex-row mb-4">
                 <label for="tgl-perolehan" class="col-form-label w-25">Tanggal Perolehan</label>
-                <input type="date" class="form-control ms-2" id="tgl-perolehan">
+                <input type="date" class="form-control ms-2" id="tgl-perolehan" name="tgl-perolehan">
             </div>
         </div>
     </div>

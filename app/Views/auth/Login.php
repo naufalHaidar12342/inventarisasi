@@ -3,22 +3,29 @@
 <?= $this->section('content'); ?>
 
 
-    <h2 class="h2 text-uppercase fs-3 text-center mb-5 mt-5 pt-4">Sistem Informasi Manajemen Aset</h2>
+<h2 class="h2 text-uppercase fs-3 text-center mb-5 mt-5 pt-4">Sistem Informasi Manajemen Aset</h2>
 
-    <form action="/Login/submit" method="post">
-        <?= csrf_field(); ?>
+<form action="/login" method="post">
+    <?= csrf_field(); ?>
 
-        <div class="container d-flex flex-column align-items-center">
+    <div class="container d-flex flex-column align-items-center">
         <!-- baris untuk kode barang dan NUP SIMAK -->
         <div class="row justify-content-md-center my-4 w-50">
             <div class="col">
-                <div class="col-12 d-flex flex-row mb-4">
-                    <label for="kode-barang" class=" w-25 col-form-label">Username</label>
-                    <input type="text" class="form-control ms-2" id="kode-barang" name="kode-barang">
+                <div class="card">
+
                 </div>
                 <div class="col-12 d-flex flex-row mb-4">
-                    <label for="nama-barang" class="w-25 col-form-label">Password</label>
-                    <input type="email" class="form-control ms-2" id="nama-barang" name="nama-barang">
+                    <label for="email" class=" w-25 col-form-label">E-mail</label>
+                    <input type="email" class="form-control ms-2" id="email" name="email">
+                </div>
+                <div class="col-12 d-flex flex-row mb-4">
+                    <label for="username" class=" w-25 col-form-label">Username</label>
+                    <input type="text" class="form-control ms-2" id="username" name="username">
+                </div>
+                <div class="col-12 d-flex flex-row mb-4">
+                    <label for="password" class="w-25 col-form-label">Password</label>
+                    <input type="password" class="form-control ms-2" id="password" name="password">
                 </div>
             </div>
         </div>
@@ -28,12 +35,12 @@
             <div class="col-12">
                 <button type="submit" class="btn btn-primary mx-2" name="submit">
                     <i class="fa fa-paper-plane" aria-hidden="true"></i>
-                    Submit
+                    Masuk
                 </button>
 
-                <a href="/Login/register" class="btn btn-success mx-2">
+                <a href="/Login/signUp" class="btn btn-success mx-2">
                     <i class="bi bi-journal-album"></i>
-                    Register
+                    Daftar Akun
                 </a>
             </div>
         </div>

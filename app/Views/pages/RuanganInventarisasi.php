@@ -72,11 +72,17 @@
 </div>
 
 <!-- tombol kembali ke page sebelumnya -->
-<div class="row justify-content-center g-3">
-    <a class="btn btn-primary col-1 mt-5" href="/">
-        <i class="bi bi-box-arrow-left "></i>
-        Kembali
-    </a>
+<div class="container d-flex flex-column align-items-center">
+    <div class="row d-flex my-5">
+        <div class="col-12">
+            <a class="btn btn-primary" href="/">
+                <i class="bi bi-box-arrow-left "></i>
+                Kembali
+            </a>
+        </div>
+
+    </div>
+
 </div>
 
 
