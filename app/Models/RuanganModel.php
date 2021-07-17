@@ -19,7 +19,7 @@ class RuanganModel extends Model
     protected $allowedFields = [
         'id',
         'nama_ruangan',
-        'kode_ruangan'
+        'kode_ruangan',
     ];
 
     //menyanmbungkan ke database

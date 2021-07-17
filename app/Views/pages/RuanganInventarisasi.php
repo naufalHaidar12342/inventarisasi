@@ -28,12 +28,12 @@
     <div class="col-12 col-lg-4">
         <div class="card m-auto shadow" style="width: 24rem;">
             <!-- source :https://www.pexels.com/photo/stack-of-books-in-shelf-256559/ -->
-            <img src="/img/pexels-olha-ruskykh-7504860.jpg" class="card-img-top" alt="bagian-cs">
+            <img src="<?= base_url(); ?>/img/pexels-olha-ruskykh-7504860.jpg" class="card-img-top" alt="bagian-cs">
             <div class="card-body">
                 <h5 class="card-title">Customer Service</h5>
                 <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
 
-                <a href="/Inventarisasi/customerService" class="btn btn-primary shadow">
+                <a href="<?= base_url(); ?>/Inventarisasi/customerService" class="btn btn-primary shadow">
                     Masuk
                     <i class="bi bi-box-arrow-in-right"></i>
                 </a>
@@ -43,11 +43,11 @@
     <!-- opsi produksi -->
     <div class="col-12 col-lg-4">
         <div class="card m-auto shadow" style="width: 24rem;">
-            <img src="/img/pexels-cleyder-duque-3637786.jpg" class="card-img-top" alt="bagian-produksi">
+            <img src="<?= base_url(); ?>/img/pexels-cleyder-duque-3637786.jpg" class="card-img-top" alt="bagian-produksi">
             <div class="card-body">
                 <h5 class="card-title">Produksi</h5>
                 <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                <a href="/Inventarisasi/produksi" class="btn btn-primary shadow ">
+                <a href="<?= base_url(); ?>/Inventarisasi/produksi" class="btn btn-primary shadow ">
                     Masuk
                     <i class="bi bi-box-arrow-in-right"></i>
                 </a>
@@ -58,11 +58,11 @@
     <!-- opsi akuntansi -->
     <div class="col-12 col-lg-4 ">
         <div class="card m-auto shadow" style="width: 24rem;">
-            <img src="/img/pexels-tima-miroshnichenko-6693630.jpg" class="card-img-top" alt="bagian-akuntansi">
+            <img src="<?= base_url(); ?>/img/pexels-tima-miroshnichenko-6693630.jpg" class="card-img-top" alt="bagian-akuntansi">
             <div class="card-body">
                 <h5 class="card-title">Akuntansi</h5>
                 <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                <a href="/Inventarisasi/akuntansi" class="btn btn-primary shadow">
+                <a href="<?= base_url(); ?>/Inventarisasi/akuntansi" class="btn btn-primary shadow">
                     Masuk
                     <i class="bi bi-box-arrow-in-right"></i>
                 </a>
@@ -75,7 +75,7 @@
 <div class="container d-flex flex-column align-items-center">
     <div class="row d-flex my-5">
         <div class="col-12">
-            <a class="btn btn-primary shadow" href="/">
+            <a class="btn btn-primary shadow" href="<?= base_url(); ?>/">
                 <i class="bi bi-box-arrow-left "></i>
                 Kembali
             </a>

@@ -2,12 +2,11 @@
 
 namespace App\Controllers;
 
+use App\Models\InventarisModel;
 
 
 class Inventarisasi extends BaseController
 {
-    protected $request;
-
 
 
     public function index()
@@ -49,29 +48,39 @@ class Inventarisasi extends BaseController
         ];
 
 
-        echo view('pages/BarangCS', $data);
+        return view('pages/BarangCS', $data);
     }
 
     //mengisi data di cs
     public function inputCS()
     {
+
         $data = [
-            'title' => "Tambah Data CS"
+            'title' => "Tambah Data CS",
+
         ];
 
 
-        echo view('pages/input/InputCS', $data);
+        return view('pages/input/InputCS', $data);
     }
+
+    //menu edit
+    public function editCS()
+    {
+        $data = [
+            'title' => "Edit Ruang CS"
+        ];
+        return view('pages/edit/EditCS', $data);
+    }
+
+    public function updateCS()
+    {
+    }
+
 
     //menangkap data yang dikirim
     public function saveCS()
     {
-        //mengubah format tanggal dari html( <input type="date")
-        //menjadi format tanggal yang diterima MySQL
-        $tanggal = $this->request->getVar('tgl-perolehan');
-        $formattedDate = date("Y-m-d H:i:s", strtotime($tanggal));
-
-
 
         $data = [
             'nama_barang' => $this->request->getVar('nama-barang'),
@@ -103,15 +112,29 @@ class Inventarisasi extends BaseController
     public function inputAcct()
     {
         $data = [
-            'title' => "Tambah Data Akuntansi"
+            'title' => "Tambah Data Akuntansi",
+
         ];
 
 
-        echo view('pages/input/InputAkuntansi', $data);
+        return view('pages/input/InputAkuntansi', $data);
     }
+
+    //menu edit milik ruangan akuntansi
+    public function editAcct()
+    {
+        $data = [
+            'title' => 'Edit Ruang Akuntansi'
+        ];
+
+        return view('pages/edit/EditAkuntansi', $data);
+    }
+
     //menangkap data yang dikirim
     public function saveAcct()
     {
+
+
         //mengubah format tanggal dari html( <input type="date")
         //menjadi format tanggal yang diterima MySQL
         $tanggal = $this->request->getVar('tgl-perolehan');
@@ -151,13 +174,53 @@ class Inventarisasi extends BaseController
     public function inputProduksi()
     {
         $data = [
-            'title' => "Tambah Data Produksi"
+            'title' => "Tambah Data Produksi",
+
         ];
 
 
-        echo view('pages/input/InputProduksi', $data);
+        return view('pages/input/InputProduksi', $data);
     }
-    /*akhir dari bagian akuntansi
+
+    public function editProduksi()
+    {
+        $data = [
+            'title' => 'Edit Ruang Produksi'
+        ];
+
+        return view('pages/edit/EditProduksi', $data);
+    }
+
+    public function saveProduksi()
+    {
+
+
+        //mengubah format tanggal dari html( <input type="date")
+        //menjadi format tanggal yang diterima MySQL
+        $tanggal = $this->request->getVar('tgl-perolehan');
+        $formattedDate = date("Y-m-d H:i:s", strtotime($tanggal));
+
+
+
+        $data = [
+            'nama_barang' => $this->request->getVar('nama-barang'),
+            'tanggal_perolehan' => $formattedDate,
+            'keterangan' => $this->request->getVar('keterangan-kondisi'),
+            'kondisi_id' => $this->request->getVar('kondisi'),
+            'ruangan_id' => $this->request->getVar('keterangan-ruangan'),
+        ];
+
+        $Inventaris = model('App\Models\InventarisModel');
+        $Inventaris->save($data);
+        session()->setFlashData('pesan', 'Data berhasil ditambahkan!');
+        return redirect()->to('/Inventarisasi/akuntansi');
+    }
+
+    //fungsi delete. belum sempat diterapkan
+    public function delete($id)
+    {
+    }
+    /*akhir dari bagian produksi
     ==================================<<<*/
 
     // halaman about us

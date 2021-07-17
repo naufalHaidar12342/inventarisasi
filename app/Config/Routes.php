@@ -33,9 +33,12 @@ $routes->setAutoRoute(true);
 // route since we don't have to scan directories.
 // $routes->get('/', 'Home::index');
 $routes->get('/', 'Inventarisasi::index');
-// $routes->get('/', 'Login::index');
 
-// $routes->get('/customer-service', 'Inventarisasi::customerService');
+//routes ketika fungsi delete sudah bisa diterapkan
+// $routes->delete('/Inventarisasi/(:num)', 'Inventarisasi::delete/$1');
+
+
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing

@@ -8,7 +8,7 @@
 
 <!-- tombol kembali ke halaman pilih aksi -->
 <div class="container d-flex flex-column align-items-start">
-    <a href="/Inventarisasi/index" class="btn btn-primary shadow my-4">
+    <a href="<?= base_url(); ?>/Inventarisasi/index" class="btn btn-primary shadow my-4">
         <i class="bi bi-box-arrow-left "></i>
         Kembali
     </a>
@@ -21,14 +21,14 @@
             <div class="col-12 d-flex flex-row mb-4">
                 <!-- ruangan asal -->
                 <label for="ruanganAsal" class="w-25 col-form-label">Ruangan Asal</label>
-                <input type="text" name="ruangan-asal" id="ruangan-asal" class="form-control ms-2">
+                <input type="text" name="ruangan-asal" id="ruangan-asal" class="form-control ms-2 shadow" disabled>
 
             </div>
 
             <div class="col-12 d-flex flex-row mb-4">
                 <!-- ruangan tujuan -->
                 <label for="ruanganTujuan" class="w-25 col-form-label">Ruangan Tujuan</label>
-                <input type="text" name="ruangan-tujuan" id="ruangan-tujuan" class="form-control ms-2">
+                <input type="text" name="ruangan-tujuan" id="ruangan-tujuan" class="form-control ms-2 shadow" disabled>
             </div>
 
         </div>
@@ -37,14 +37,14 @@
             <div class="col-12 d-flex flex-row mb-4">
                 <!-- ruangan asal -->
                 <label for="pengirim" class="w-25 col-form-label">Pengirim</label>
-                <input type="text" name="pengirim" id="" class="form-control ms-2">
+                <input type="text" name="pengirim" id="" class="form-control ms-2 shadow" disabled>
 
             </div>
 
             <div class="col-12 d-flex flex-row mb-4">
                 <!-- ruangan tujuan -->
                 <label for="penerima" class="w-25 col-form-label">Penerima</label>
-                <input type="text" name="penerima" id="penerima" class="form-control ms-2">
+                <input type="text" name="penerima" id="penerima" class="form-control ms-2 shadow" disabled>
             </div>
         </div>
     </div>
@@ -55,7 +55,7 @@
     <div class="row d-flex my-4">
         <div class="col-12">
             <a href="" class="btn btn-success shadow">
-                <i class="bi bi-box-arrow-left "></i>
+                <i class="bi bi-file-earmark-plus"></i>
                 Tambah Data
             </a>
             <a href="" class="btn btn-warning shadow">
