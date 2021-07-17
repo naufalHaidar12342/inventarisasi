@@ -50,8 +50,6 @@
 
 <!-- bagian menampilkan ruangan dan pengurus -->
 
-<?= csrf_field(); ?>
-
 <div class="container d-flex flex-row">
     <div class="row justify-content-between ms-3 me-4 my-4 w-100">
         <div class="col-5">
@@ -88,7 +86,7 @@
                 <i class="bi bi-file-earmark-plus"></i>
                 Tambah Data
             </a>
-            <a href="" class="btn btn-warning shadow ms-2">
+            <a href="<?= base_url(); ?>/Inventarisasi/editCS" class="btn btn-warning shadow ms-2">
                 <i class="bi bi-pencil-square"></i>
                 Edit Data
             </a>

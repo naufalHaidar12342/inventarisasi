@@ -55,7 +55,7 @@
                 <i class="bi bi-file-earmark-plus"></i>
                 Tambah Data
             </a>
-            <a href="" class="btn btn-warning shadow">
+            <a href="<?= base_url(); ?>/Inventarisasi/editAcct" class="btn btn-warning shadow">
                 <i class="bi bi-pencil-square"></i>
                 Edit Data
             </a>

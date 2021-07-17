@@ -2,6 +2,7 @@
 
 namespace App\Controllers;
 
+use App\Models\InventarisModel;
 
 
 class Inventarisasi extends BaseController
@@ -63,6 +64,20 @@ class Inventarisasi extends BaseController
         return view('pages/input/InputCS', $data);
     }
 
+    //menu edit
+    public function editCS()
+    {
+        $data = [
+            'title' => "Edit Ruang CS"
+        ];
+        return view('pages/edit/EditCS', $data);
+    }
+
+    public function updateCS()
+    {
+    }
+
+
     //menangkap data yang dikirim
     public function saveCS()
     {
@@ -104,6 +119,17 @@ class Inventarisasi extends BaseController
 
         return view('pages/input/InputAkuntansi', $data);
     }
+
+    //menu edit milik ruangan akuntansi
+    public function editAcct()
+    {
+        $data = [
+            'title' => 'Edit Ruang Akuntansi'
+        ];
+
+        return view('pages/edit/EditAkuntansi', $data);
+    }
+
     //menangkap data yang dikirim
     public function saveAcct()
     {
@@ -156,6 +182,15 @@ class Inventarisasi extends BaseController
         return view('pages/input/InputProduksi', $data);
     }
 
+    public function editProduksi()
+    {
+        $data = [
+            'title' => 'Edit Ruang Produksi'
+        ];
+
+        return view('pages/edit/EditProduksi', $data);
+    }
+
     public function saveProduksi()
     {
 
@@ -181,7 +216,10 @@ class Inventarisasi extends BaseController
         return redirect()->to('/Inventarisasi/akuntansi');
     }
 
-
+    //fungsi delete. belum sempat diterapkan
+    public function delete($id)
+    {
+    }
     /*akhir dari bagian produksi
     ==================================<<<*/
 
