@@ -8,7 +8,7 @@
 <div class="row justify-content-center g-3">
     <div class="col-12 col-lg-4">
         <div class="card m-auto shadow" style="width: 24rem;">
-            <img src="/img/pexels-pixabay-256559.jpg" class="card-img-top" alt="...">
+            <img src="<?= base_url(); ?>/img/pexels-pixabay-256559.jpg" class="card-img-top" alt="...">
             <div class="card-body">
                 <p class="card-text">
                     Courtesy: Pexels
@@ -27,7 +27,7 @@
     </div>
     <div class="col-12 col-lg-4">
         <div class="card m-auto shadow" style="width: 24rem;">
-            <img src="/img/robinson-greig-HrnAxAUwle8-unspl.jpg" class="card-img-top" alt="...">
+            <img src="<?= base_url(); ?>/img/robinson-greig-HrnAxAUwle8-unspl.jpg" class="card-img-top" alt="...">
             <div class="card-body">
                 <p class="card-text">
                     Courtesy: <a href="https://unsplash.com/@robinson?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">
