@@ -16,7 +16,11 @@ class RuanganModel extends Model
     protected $returnType = "array";
 
     //menentukan field yang bisa dimanipulasi
-    protected $allowedFields = ['nama_ruangan', 'kode_ruangan', 'lantai', 'keterangan'];
+    protected $allowedFields = [
+        'id',
+        'nama_ruangan',
+        'kode_ruangan'
+    ];
 
     //menyanmbungkan ke database
     protected $db;

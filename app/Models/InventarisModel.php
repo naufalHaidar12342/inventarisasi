@@ -17,7 +17,7 @@ class InventarisModel extends Model
     protected $returnType = "array";
 
     //menentukan field yang bisa dimanipulasi
-    protected $allowedFields = ['kode_barang', 'nama_barang', 'tanggal_perolehan', 'keterangan', 'kondisi'];
+    protected $allowedFields = ['nama_barang', 'kondisi_id', 'tanggal_perolehan', 'keterangan', 'ruangan_id'];
 
     //menyanmbungkan ke database
     protected $db;
