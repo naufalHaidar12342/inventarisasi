@@ -18,7 +18,7 @@
                 <p class="card-text fst-italic">
                     Berisi ruangan Customer Service, Produksi, dan Akuntansi
                 </p>
-                <a href="/Inventarisasi/pindah" class="btn btn-primary">
+                <a href="<?= base_url(); ?>/Inventarisasi/pindah" class="btn btn-primary">
                     Masuk
                     <i class="bi bi-box-arrow-in-right"></i>
                 </a>
@@ -43,7 +43,7 @@
                 <h5 class="card-title">Pindah Ruangan</h5>
                 <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
 
-                <a href="/Inventarisasi/ruanganBMU" class="btn btn-primary">
+                <a href="<?= base_url(); ?>/Inventarisasi/ruanganBMU" class="btn btn-primary">
                     Masuk
                     <i class="bi bi-box-arrow-in-right"></i>
                 </a>

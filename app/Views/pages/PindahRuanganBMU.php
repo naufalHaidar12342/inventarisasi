@@ -8,7 +8,7 @@
 
 <!-- tombol kembali ke halaman pilih aksi -->
 <div class="container d-flex flex-column align-items-start">
-    <a href="/Inventarisasi/index" class="btn btn-primary shadow my-4">
+    <a href="<?= base_url(); ?>/Inventarisasi/index" class="btn btn-primary shadow my-4">
         <i class="bi bi-box-arrow-left "></i>
         Kembali
     </a>
